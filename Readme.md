@@ -26,7 +26,7 @@ cd platform-caching
 
 ### Run the Application
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 This will start the following services:
 - **Web (Flask API)** on `http://localhost:5000`

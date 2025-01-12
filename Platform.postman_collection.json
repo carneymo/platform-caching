@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "fd7aa506-367f-4bd7-a946-f7b396bd56fe",
+		"name": "Platform Caching",
+		"description": "This Postman Collection is designed to test the **Platform Caching API**, which provides a unified caching interface for different backend implementations such as Redis, Garnet, or Dragonfly. It includes endpoints for creating, retrieving, updating, and deleting cached key-value pairs.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "847268"
+	},
+	"item": [
+		{
+			"name": "Retrieve Cache Entry",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Cache Entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"name\",\r\n    \"value\": \"John Doe\",\r\n    \"expire\": -1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cache_url}}/api/cache",
+					"host": [
+						"{{cache_url}}"
+					],
+					"path": [
+						"api",
+						"cache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cache Entry",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"value\": \"Jane Doe\",\r\n  \"expire\": 90\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cache_url}}/api/cache/{{Key}}",
+					"host": [
+						"{{cache_url}}"
+					],
+					"path": [
+						"api",
+						"cache",
+						"{{Key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cache Entry",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cache_url",
+			"value": "http://localhost:5000"
+		},
+		{
+			"key": "Key",
+			"value": "name"
+		}
+	]
+}

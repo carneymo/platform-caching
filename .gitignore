@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.venv
+
+# pytest cache
+pytest_cache/
+
+# Logs and database files
+*.log
+*.sqlite3
+*.db
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore Redis dump files (if using persistence)
+dump.rdb
+appendonly.aof
+
+# Ignore Docker-related files
+docker-compose.override.yml
+.dockerignore
+.DS_Store
+
+# Ignore Python dependency management files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ignore IDE / Editor metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore test artifacts
+.coverage
+nosetests.xml
+coverage.xml
+htmlcov/
+tox/
+*.tox
+
+# Ignore compiled static assets (if applicable)
+node_modules/
+staticfiles/

@@ -48,9 +48,9 @@ This will start the following services:
 4. Run the requests to test API functionality.
 
 ### Running Unit Tests
-Run the following command inside the container to execute unit tests:
+Run the following command from in the `platform-caching` folder:
 ```sh
-docker exec -it platform-caching-web pytest
+pytest
 ```
 
 ## Contributing
